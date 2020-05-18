@@ -20,34 +20,19 @@
 
         <main>
             <div>
-                <h1 id="title">To be decided.</h1>
-                <p id="description">What is this surver for?</p>
+                <h1 id="title">Find Your PARTNER!!!</h1>
+                <p id="description">Are you still single?<br>Looking for a partner?<br>Fear not<br>Fill out the form and we will find you ONE!!!</p>
             </div>
 
             <form id="survey-form" action="#">
                 <div>
-                    <p>name?</p>
-                    <label id="name-label" for="name">Your name:<input name="name?" id="name" required type="text" placeholder="First LAST"></label>
+                    <p>What's your name?</p>
+                    <label id="name-label" for="name">Name:<input name="name" id="name" required type="text" placeholder="First LAST"></label>
                 </div>
 
                 <div>
-                    <p>email?</p>
-                    <label id="email-label" for="email">Your email:<input name="email?" id="email" required type="email" placeholder="abc@xxx.com"></label>
-                </div>
-
-                <div>
-                    <p>Ask a question that ask number</p>
-                    <label id="number-label" for="number">Your number:<input id="number" name="what number?" type="number" min="0" max="99" placeholder="number?" required></label>
-                </div>
-
-                <div>
-                    <select id="dropdown" name="ABC" required>
-                        <option disabled selected value>Please Select</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                        <option value="D">D</option>
-                    </select>
+                    <p>What's your age?</p>
+                    <label id="number-label" for="number">Age:<input id="number" name="Age" type="number" min="0" max="130" placeholder="Age" required></label>
                 </div>
 
                 <div>
@@ -60,22 +45,44 @@
                 </div>
 
                 <div>
+                    <p>What's your email?</p>
+                    <label id="email-label" for="email">Email:<input name="email" id="email" required type="email" placeholder="abc@xxx.com"></label>
+                </div>
+
+                <div>
+                    <p>What's your phone number?</p>
+                    <label id="phone-label" for="phone">Phone No:<input name="phone" id="phone" required type="number" placeholder="9999 9999"></label>
+                </div>
+
+                <div>
+                    <p>Which area do you stay?</p>
+                    <select id="dropdown" name="Area" required>
+                        <option disabled selected value>Please Select</option>
+                        <option value="North">North</option>
+                        <option value="East">East</option>
+                        <option value="South">South</option>
+                        <option value="West">West</option>
+                        <option value="Central">Central</option>
+                    </select>
+                </div>
+
+                <div>
                     <fieldset>
                         <legend>Interested in:</legend>
-                        <label for="longrs"><input name="Interest" id="longrs" type="checkbox" value="longrs">long-term relationship</label>
-                        <label for="shortrs"><input name="Interest" id="shortrs" type="checkbox" value="shortrs">short-term relationship</label>
-                        <label for="friend"><input name="Interest" id="friend" type="checkbox" value="friend" checked>friend</label>
-                        <label for="marriage"><input name="Interest" id="marriage" type="checkbox" value="marriage">marriage</label>
+                        <label for="longrs"><input name="Interest" id="longrs" type="checkbox" value="longrs">Long-term relationship</label>
+                        <label for="shortrs"><input name="Interest" id="shortrs" type="checkbox" value="shortrs">Short-term relationship</label>
+                        <label for="friend"><input name="Interest" id="friend" type="checkbox" value="friend" checked>Friend</label>
+                        <label for="marriage"><input name="Interest" id="marriage" type="checkbox" value="marriage">Marriage</label>
                     </fieldset>
                 </div>
 
                 <div>
-                    <p>Introduce Yourself</p>
-                    <textarea name="Self Intruduction" placeholder="Describe yourself"></textarea>
+                    <p>Introduce Yourself.</p>
+                    <textarea name="Self Introduction" placeholder="Describe yourself."></textarea>
                 </div>
 
                 <div>
-                    <button id="submit" type="submit">Submit!</button>
+                    <button id="submit" type="submit">Submit Your Info!</button>
                 </div>
             </form>
         </main>
