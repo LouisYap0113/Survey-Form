@@ -5,7 +5,49 @@
             html{
                     font-size:100%;
                 }
-
+            body{
+                    background:#eee;
+                }
+            main{
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    width:70%;
+                    margin:0 auto;
+                    font-size:1.2rem;
+                }
+            .center{
+                    text-align:center;
+                   }
+            .block{
+                    display:block;
+                  }
+            .gap{
+                    margin-bottom:1rem;
+                }
+            #title{
+                    margin-bottom:0;
+                  }
+            #description{
+                            margin-top:0;
+                            margin-bottom:0.5rem;
+                        }
+            .list-order{
+                        display:flex;
+                        flex-direction: column;
+                       }
+            .mini-container{
+                            width:40%;
+                           }
+            .button{
+                    margin:0 auto;
+                    display:block;
+                   }
+            form{
+                    border-style:solid;
+                    border-radius:1rem;
+                    padding:0.5rem;
+                }
 
 
 
@@ -19,42 +61,40 @@
         </style>
 
         <main>
-            <div>
-                <h1 id="title">Find Your PARTNER!!!</h1>
-                <p id="description">Are you still single?<br>Looking for a partner?<br>Fear not<br>Fill out the form and we will find you ONE!!!</p>
+            <div class="gap center mini-container">
+                <h1 id="title">Find Your PARTNER</h1>
+                <p id="description"><em>Looking for a partner?<br>Fill out the form and we will find you ONE!!!</em></p>
             </div>
 
-            <form id="survey-form" action="#">
-                <div>
-                    <p>What's your name?</p>
-                    <label id="name-label" for="name">Name:<input name="name" id="name" required type="text" placeholder="First LAST"></label>
+            <form class="mini-container" id="survey-form" action="#">
+                <div class="gap">
+                    <label id="name-label" for="name">What's your name?</label>
+                    <input class="block" name="name" id="name" required type="text" placeholder="First LAST">
                 </div>
 
-                <div>
-                    <p>What's your age?</p>
-                    <label id="number-label" for="number">Age:<input id="number" name="Age" type="number" min="0" max="130" placeholder="Age" required></label>
+                <div class="gap">
+                    <label id="number-label" for="number">What's your age?</label>
+                    <input class="block" id="number" name="Age" type="number" min="0" max="130" placeholder="Age" required>
                 </div>
 
-                <div>
-                    <fieldset>
-                        <legend>Gender</legend>
-                        <label for="male"><input name="gender" id="male" type="radio" value="m">male</label>
-                        <label for="female"><input name="gender" id="female" type="radio" value="f">female</label>
-                        <label for="NotSaid"><input name="gender" id="Notsaid" type="radio" value="NA" checked>Prefer not to say</label>
-                    </fieldset>
+                <div class="gap list-order">
+                    <p>Gender</p>
+                    <label for="male"><input name="gender" id="male" type="radio" value="m">male</label>
+                    <label for="female"><input name="gender" id="female" type="radio" value="f">female</label>
+                    <label for="NotSaid"><input name="gender" id="Notsaid" type="radio" value="NA" checked>Prefer not to say</label>
                 </div>
 
-                <div>
-                    <p>What's your email?</p>
-                    <label id="email-label" for="email">Email:<input name="email" id="email" required type="email" placeholder="abc@xxx.com"></label>
+                <div class="gap">
+                    <label id="email-label" for="email">What's your email?</label>
+                    <input class="block" name="email" id="email" required type="email" placeholder="abc@xxx.com">
                 </div>
 
-                <div>
-                    <p>What's your phone number?</p>
-                    <label id="phone-label" for="phone">Phone No:<input name="phone" id="phone" required type="number" placeholder="9999 9999"></label>
+                <div class="gap">
+                    <label id="phone-label" for="phone">What's your phone number?</label>
+                    <input class="block" name="phone" id="phone" required type="text" placeholder="9999 9999">
                 </div>
 
-                <div>
+                <div class="gap">
                     <p>Which area do you stay?</p>
                     <select id="dropdown" name="Area" required>
                         <option disabled selected value>Please Select</option>
@@ -66,14 +106,12 @@
                     </select>
                 </div>
 
-                <div>
-                    <fieldset>
-                        <legend>Interested in:</legend>
-                        <label for="longrs"><input name="Interest" id="longrs" type="checkbox" value="longrs">Long-term relationship</label>
-                        <label for="shortrs"><input name="Interest" id="shortrs" type="checkbox" value="shortrs">Short-term relationship</label>
-                        <label for="friend"><input name="Interest" id="friend" type="checkbox" value="friend" checked>Friend</label>
-                        <label for="marriage"><input name="Interest" id="marriage" type="checkbox" value="marriage">Marriage</label>
-                    </fieldset>
+                <div class="gap list-order">
+                    <p>Interested in:</p>
+                    <label for="longrs"><input name="Interest" id="longrs" type="checkbox" value="longrs">Long-term relationship</label>
+                    <label for="shortrs"><input name="Interest" id="shortrs" type="checkbox" value="shortrs">Short-term relationship</label>
+                    <label for="friend"><input name="Interest" id="friend" type="checkbox" value="friend" checked>Friend</label>
+                    <label for="marriage"><input name="Interest" id="marriage" type="checkbox" value="marriage">Marriage</label>
                 </div>
 
                 <div>
@@ -82,7 +120,7 @@
                 </div>
 
                 <div>
-                    <button id="submit" type="submit">Submit Your Info!</button>
+                    <button class="button" id="submit" type="submit">Submit Your Info!</button>
                 </div>
             </form>
         </main>
