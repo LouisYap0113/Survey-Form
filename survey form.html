@@ -9,10 +9,7 @@
                     background:#eee;
                 }
             main{
-                    display:flex;
-                    flex-direction:column;
-                    align-items:center;
-                    width:70%;
+                    max-width:720px;
                     margin:0 auto;
                     font-size:1.2rem;
                 }
@@ -23,7 +20,12 @@
                     display:block;
                   }
             .gap{
+                    margin-top: 0;
                     margin-bottom:1rem;
+                }
+            .gap2{
+                    margin-top: 0;
+                    margin-bottom:0;
                 }
             #title{
                     margin-bottom:0;
@@ -36,18 +38,24 @@
                         display:flex;
                         flex-direction: column;
                        }
-            .mini-container{
-                            width:40%;
-                           }
             .button{
-                    margin:0 auto;
+                    margin:2rem auto 0 auto;
                     display:block;
+                    font-size: 3rem;
                    }
             form{
                     border-style:solid;
                     border-radius:1rem;
                     padding:0.5rem;
                 }
+            .form-control{
+                            width:100%;
+                            height:1.8rem;
+                         }
+            .textarea{
+                        width:100%;
+                        height:12rem;
+                     }
 
 
 
@@ -61,42 +69,42 @@
         </style>
 
         <main>
-            <div class="gap center mini-container">
+            <div class="gap center">
                 <h1 id="title">Find Your PARTNER</h1>
                 <p id="description"><em>Looking for a partner?<br>Fill out the form and we will find you ONE!!!</em></p>
             </div>
 
-            <form class="mini-container" id="survey-form" action="#">
+            <form id="survey-form" action="#">
                 <div class="gap">
                     <label id="name-label" for="name">What's your name?</label>
-                    <input class="block" name="name" id="name" required type="text" placeholder="First LAST">
+                    <input class="block form-control" name="name" id="name" required type="text" placeholder="First LAST">
                 </div>
 
                 <div class="gap">
                     <label id="number-label" for="number">What's your age?</label>
-                    <input class="block" id="number" name="Age" type="number" min="0" max="130" placeholder="Age" required>
+                    <input class="block form-control" id="number" name="Age" type="number" min="0" max="130" placeholder="Age" required>
                 </div>
 
                 <div class="gap list-order">
-                    <p>Gender</p>
-                    <label for="male"><input name="gender" id="male" type="radio" value="m">male</label>
-                    <label for="female"><input name="gender" id="female" type="radio" value="f">female</label>
+                    <p class="gap2">Gender</p>
+                    <label for="male"><input name="gender" id="male" type="radio" value="m">Male</label>
+                    <label for="female"><input name="gender" id="female" type="radio" value="f">Female</label>
                     <label for="NotSaid"><input name="gender" id="Notsaid" type="radio" value="NA" checked>Prefer not to say</label>
                 </div>
 
                 <div class="gap">
                     <label id="email-label" for="email">What's your email?</label>
-                    <input class="block" name="email" id="email" required type="email" placeholder="abc@xxx.com">
+                    <input class="block form-control" name="email" id="email" required type="email" placeholder="abc@xxx.com">
                 </div>
 
                 <div class="gap">
                     <label id="phone-label" for="phone">What's your phone number?</label>
-                    <input class="block" name="phone" id="phone" required type="text" placeholder="9999 9999">
+                    <input class="block form-control" name="phone" id="phone" required type="text" placeholder="9999 9999">
                 </div>
 
                 <div class="gap">
-                    <p>Which area do you stay?</p>
-                    <select id="dropdown" name="Area" required>
+                    <p class="gap2">Which area do you stay?</p>
+                    <select class="block form-control" id="dropdown" name="Area" required>
                         <option disabled selected value>Please Select</option>
                         <option value="North">North</option>
                         <option value="East">East</option>
@@ -107,7 +115,7 @@
                 </div>
 
                 <div class="gap list-order">
-                    <p>Interested in:</p>
+                    <p class="gap2">Interested in:</p>
                     <label for="longrs"><input name="Interest" id="longrs" type="checkbox" value="longrs">Long-term relationship</label>
                     <label for="shortrs"><input name="Interest" id="shortrs" type="checkbox" value="shortrs">Short-term relationship</label>
                     <label for="friend"><input name="Interest" id="friend" type="checkbox" value="friend" checked>Friend</label>
@@ -115,12 +123,12 @@
                 </div>
 
                 <div>
-                    <p>Introduce Yourself.</p>
-                    <textarea name="Self Introduction" placeholder="Describe yourself."></textarea>
+                    <p class="gap2">Introduce Yourself.</p>
+                    <textarea class="textarea" name="Self Introduction" placeholder="Describe yourself."></textarea>
                 </div>
 
                 <div>
-                    <button class="button" id="submit" type="submit">Submit Your Info!</button>
+                    <button class="button" id="submit" type="submit"><strong>Submit Your Info!</strong></button>
                 </div>
             </form>
         </main>
